@@ -71,8 +71,6 @@ RouteModel::Node *RoutePlanner::NextNode() {
 
 // Utility function to compare g+h values of 2 nodes. Will be used for sorting the array of node pointers.
 bool RoutePlanner::CompareSumOfGandH(RouteModel::Node* a, RouteModel::Node* b) {
-    std::cout << "CompareSumOfGandH\n";
-    //return (a->g_value + a->h_value)<(b->g_value + b->h_value);
     return (a->g_value + a->h_value)>(b->g_value + b->h_value); // Sorts in descending order
     //??? Why not use < instead and just grab the beginning of the vector?
 }
